@@ -1,19 +1,34 @@
-# VLSI Verilog Design
+# Half Adder
 
-Basic Verilog HDL designs and digital design implementations developed while learning VLSI and ASIC design.
+A basic combinational logic circuit that adds two 1-bit binary inputs.
 
-## Topics
+## Design
 
-* Combinational Logic
-* Sequential Logic
-* Multiplexers & Decoders
-* Adders & Subtractors
-* Encoders
-* ALU
-* Flip-Flops
-* Shift Registers
-* Counters
-* RTL Design
+**Inputs:** A, B
+**Outputs:** Sum, Carry
+
+### Boolean Expressions
+
+```text
+Sum   = A XOR B
+Carry = A AND B
+```
+
+## Truth Table
+
+| A | B | Sum | Carry |
+| - | - | --- | ----- |
+| 0 | 0 | 0   | 0     |
+| 0 | 1 | 1   | 0     |
+| 1 | 0 | 1   | 0     |
+| 1 | 1 | 0   | 1     |
+
+## Files
+
+* `half_adder.v` — Verilog RTL design
+* `tb_half_adder.v` — Verilog testbench
+* `half_adder_waveform.png` — ModelSim simulation waveform
+* `half_adder_synthesis.png` — Quartus Prime synthesis result
 
 ## Tools
 
@@ -21,6 +36,6 @@ Basic Verilog HDL designs and digital design implementations developed while lea
 * ModelSim
 * Intel Quartus Prime
 
-## Focus
+## Verification
 
-Learning and implementing fundamental RTL designs with a focus on understanding Verilog coding, simulation, synthesis and digital hardware design.
+The Half Adder was verified using ModelSim for all four input combinations and synthesized successfully using Intel Quartus Prime.
